@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.edu - {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- import icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    {% block content %}
+        {% block header %}
+            <header>
+                <nav class="container">
+                    <a href="/" class="logo">
+                        <i class='bx bx-code-alt'></i>
+                        <span id="k">K</span>
+                        <span id="dot">.</span>
+                        <span id="edu">edu</span>
+                    </a>
+                    <span id="links_seperator"></span>
+                    <ul id="links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/courses">Courses</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                    <span id="links_seperator"></span>
+                    <ul id="secondary_links">
+                        <li>
+                            <button id="search_icon">
+                                <i class='bx bx-search'></i>
+                            </button>
+                            <input type="search" name="search_box" id="search_box" placeholder="Search Anything...">
+                        </li>
+                        <li>
+                            <a href="#" id="shop_menu">
+                                <i class='bx bx-shopping-bag'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sign_in" class="sign_in">Sign In</a>
+                        </li>
+                        <li>
+                            <a href="/sign_up" class="sign_up">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        {% endblock header %}
+            
+    {% endblock content %}
+
+
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* start global rules */
+
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+html {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 88%;
+}
+
+/* start variables */
+
+:root {
+    --main-color: #1d6a96;
+    --primary-color: #85b8cb;
+    --secondary-color: #283b42;
+    --light-color: #d1dddb;
+}
+
+/* end variables */
+
+/* end global rules */
+
+/* start header */
+
+header {
+    box-shadow: 0 0 5px 1px #000;
+}
+
+header nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav .logo {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+header nav .logo i {
+    margin-right: 5px;
+    font-size: 50px;
+    color: var(--secondary-color);
+}
+
+#links_seperator {
+    height: 100%;
+    background: var(--secondary-color);
+    width: 1px;
+    border-radius: 8px;
+}
+
+header nav .logo span#k,
+header nav .logo span#dot {
+    color: var(--main-color);
+}
+
+header nav .logo span#edu {
+    color: var(--primary-color);
+}
+
+header nav #links {
+    display: flex;
+}
+
+header nav #links li {
+    display: inline-block;
+    margin-right: 30px;
+    height: 100%;
+}
+
+header nav #links li a {
+    color: var(--secondary-color);
+    position: relative;
+    font-size: 16px;
+    transition: .4s;
+}
+
+header nav #links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width .2s;
+    transform-origin: center;
+}
+
+header nav #links li a:hover::before {
+    width: 100%;
+}
+
+header nav #secondary_links {
+    display: flex;
+    align-items: center;
+}
+
+header nav #secondary_links li:first-child {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+header nav #secondary_links li:first-child button {
+    padding: 5.5px 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    border-right-width: 1px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+header nav #secondary_links li:first-child input {
+    width: 0px;
+    padding: 0px;
+    font-size: 16px;
+    border-radius: 8px;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 0px solid var(--secondary-color);
+    transition: width .5s;
+}
+
+header nav #secondary_links li a#shop_menu {
+    color: var(--secondary-color);
+    font-size: 22px;
+    margin-right: 10px;
+    padding: 5.5px 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    border-right-width: 1px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav #secondary_links li a.sign_in {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-left: 20px;
+    transition: opacity .2s;
+}
+
+header nav #secondary_links li a.sign_in:hover {
+    opacity: 0.7;
+}
+
+header nav #secondary_links li a.sign_up {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: var(--light-color);
+    margin-left: 20px;
+}
+
+/* end header */
